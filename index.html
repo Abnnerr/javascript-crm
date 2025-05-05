@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <div class="flex h-screen relative  overflow-hidden">
+    <div class="flex h-screen relative  gap-[10px] overflow-hidden">
         <header class="w-[250px] bg-pink-600 p-4">
-            <h1 class="text-[22px] text-white text-center font-bold">Dani Brownies CRM</h1>
+            <h1 class="text-[20px] text-white text-center font-bold">Dani Brownies CRM</h1>
             <nav class="flex flex-col mt-4 gap-3 *:leading-[40px] *:rounded *:pl-4 *:text-white *:duration-200">
                 <a href="" class="hover:bg-white hover:text-pink-600">Dashboard</a>
                 <a href=""
@@ -30,85 +30,37 @@
                 <a href="" class="hover:bg-white hover:text-pink-600">Produtos</a>
             </nav>
         </header>
-        <div class="flex-1 p-10">
-            <div class=" border-solid border-[1px] border-pink-600 p-[25px] rounded-[10px]">
+        <div class="flex-1 px-[10px] py-[20px]">
+            <div class=" border-solid border-[1px] border-pink-600 px-[20px] py-[20px] rounded-[10px]">
                 <h2 class="flex justify-between items-center text-[26px] text-pink-600 font-bold">Clientes
                     <button class="text-white  bg-pink-600 px-6 rounded leading-[40px] text-[15px]"
                         onclick="showLay()">Novo Cliente</button>
                 </h2>
-                <table class="text-black mt-[60px] font-[600]">
-                    <tr class="text-pink-600">
+                <table class="text-black mt-[60px] font-[600] w-full">
+                    <thead class="text-pink-600">
                         <th class="pr-[50px]">ID</th>
                         <th class="pr-[100px]">Nome</th>
-                        <th class="pr-[500px]">Email</th>
+                        <th class="pr-[200px]">Email</th>
+                        <th class="pr-[100px]">Telefone</th>
                         <th class="pr-[100px]">Status</th>
                         <th>Ações</th>
-                    </tr>
-                    <tr class="text-[#464646]">
-                        <td class=" px-[5px] py-[20px]">1</td>
-                        <td>Jonas Abner</td>
-                        <td>Jonasabner@gmail.com</td>
-                        <td>Online</td>
-                        <td class="flex items-center py-[20px]  gap-[5px]">
-                            <box-icon type='solid' name='pencil'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"
-                                onclick="editar()"></box-icon>
-                            <box-icon type='solid' name='trash'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"></box-icon>
-                        </td>
-                    </tr>
-                    <tr class="text-[#464646]">
-                        <td class=" px-[5px] py-[20px]">1</td>
-                        <td>Jonas Abner</td>
-                        <td>Jonasabner@gmail.com</td>
-                        <td>Online</td>
-                        <td class="flex items-center py-[20px]  gap-[5px]">
-                            <box-icon type='solid' name='pencil'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"
-                                onclick="editar()"></box-icon>
-                            <box-icon type='solid' name='trash'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"></box-icon>
-                        </td>
-                    </tr>
-                    <tr class="text-[#464646]">
-                        <td class=" px-[5px] py-[20px]">1</td>
-                        <td>Jonas Abner</td>
-                        <td>Jonasabner@gmail.com</td>
-                        <td>Online</td>
-                        <td class="flex items-center py-[20px]  gap-[5px]">
-                            <box-icon type='solid' name='pencil'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"
-                                onclick="editar()"></box-icon>
-                            <box-icon type='solid' name='trash'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"></box-icon>
-                        </td>
-                    </tr>
-                    <tr class="text-[#464646]">
-                        <td class=" px-[5px] py-[20px]">1</td>
-                        <td>Jonas Abner</td>
-                        <td>Jonasabner@gmail.com</td>
-                        <td>Online</td>
-                        <td class="flex items-center py-[20px]  gap-[5px]">
-                            <box-icon type='solid' name='pencil'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"
-                                onclick="editar()"></box-icon>
-                            <box-icon type='solid' name='trash'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"></box-icon>
-                        </td>
-                    </tr>
-                    <tr class="text-[#464646]">
-                        <td class=" px-[5px] py-[20px]">1</td>
-                        <td>Jonas Abner</td>
-                        <td>Jonasabner@gmail.com</td>
-                        <td>Online</td>
-                        <td class="flex items-center py-[20px]  gap-[5px]">
-                            <box-icon type='solid' name='pencil'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"
-                                onclick="editar()"></box-icon>
-                            <box-icon type='solid' name='trash'
-                                class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"></box-icon>
-                        </td>
-                    </tr>
+                    </thead>
+                    <tbody class="text-[#464646]" id="ta">
+                        <tr class="text-[#464646]">
+                            <td class=" px-[5px] py-[20px]">1</td>
+                            <td>Jonas Abner</td>
+                            <td>Jonasabner@gmail.com</td>
+                            <td>(00) 000000-0000</td>
+                            <td>Online</td>
+                            <td class="flex items-center py-[20px]  gap-[5px]">
+                                <box-icon type='solid' name='pencil'
+                                    class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"
+                                    onclick="editar()"></box-icon>
+                                <box-icon type='solid' name='trash'
+                                    class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"></box-icon>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
@@ -126,11 +78,13 @@
                     <label for="" class="font-[600]">Nome</label>
                     <input type="text" class="w-[309px] h-[35px] border-solid border-[2px] rounded-[8px] pl-[10px]">
                     <label for="" class="font-[600]">Email</label>
-                    <input type="email" name="" id="" class="w-[309px] h-[35px] border-solid border-[2px] rounded-[8px] pl-[10px]">
+                    <input type="email" name="" id=""
+                        class="w-[309px] h-[35px] border-solid border-[2px] rounded-[8px] pl-[10px]">
                     <button class="bg-pink-600 w-[309px] h-[35px] rounded-[8px] text-white">Editar</button>
                 </div>
             </div>
-            <div id="conteiEdit" class=" flex  flex-col gap-[20px] min-w-[350px] h-full bg-white p-4 absolute top-0 -right-full duration-200">
+            <div id="conteiEdit"
+                class=" flex  flex-col gap-[20px] min-w-[350px] h-full bg-white p-4 absolute top-0 -right-full duration-200">
                 <h3 class="flex justify-between items-center font-[800]">Editar
                     <box-icon name='x'
                         class="w-[40px] h-[40px] rounded-full bg-pink-600 fill-white p-2 cursor-pointer text-center hover:bg-pink-700 duration-200"
@@ -140,7 +94,8 @@
                     <label for="" class="font-[600]">Nome</label>
                     <input type="text" class="w-[309px] h-[35px] border-solid border-[2px] rounded-[8px] pl-[10px]">
                     <label for="" class="font-[600]">Email</label>
-                    <input type="email" name="" id="" class="w-[309px] h-[35px] border-solid border-[2px] rounded-[8px] pl-[10px]">
+                    <input type="email" name="" id=""
+                        class="w-[309px] h-[35px] border-solid border-[2px] rounded-[8px] pl-[10px]">
                     <button class="bg-pink-600 w-[309px] h-[35px] rounded-[8px] text-white">Editar</button>
                 </div>
             </div>
