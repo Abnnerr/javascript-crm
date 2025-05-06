@@ -46,5 +46,3 @@ function editar() {
     editarContei.classList.add('right-0')
 
 }
-
-
