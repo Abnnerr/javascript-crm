@@ -16,28 +16,10 @@
 // }
 // console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]))
 
+function diamond(n) {
 
-function findOdd(A) {
-
-    var listaPar = []
-    contadorPar = 0
-    contadorImpar = 0
-    for (var i = 0; i < A.length; i++) {
-        // console.log(A[i])
-
-        if (A[i] % 2 == 0) {
-            contadorPar += 1
-            listaPar.push(A[i])
-            // console.log(listaPar)
-
-        }
-        if (A[i] % 2 != 0) {
-            contadorImpar += 1
-
-        }
+    for (let i = 0; i < array.length; i++) {
+        
     }
-
-    // console.log(contadorPar)
-    // console.log(contadorImpar)
 }
-findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1])
+diamond(5)

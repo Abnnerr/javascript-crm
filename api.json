@@ -1,11 +1,9 @@
 {
-    "clientes": [
-        {
-            "id":"1",
-            "nome":"conrado",
-            "email":"conrado@gmail.com",
-            "tel":"(00) 00000-0000",
-            "data": "00/00/0000"
-        }
-    ]
+  "clientes": [
+    {
+      "nome": "",
+      "email": "",
+      "id": 1
+    }
+  ]
 }

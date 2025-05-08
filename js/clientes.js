@@ -17,7 +17,7 @@ function carregarClientes(listaDeClientes) {
     tbodyElement.innerHTML = '';
     listaDeClientes.map((cliente) => {
         tbodyElement.innerHTML += `<tr class="text-[#464646]">
-        <td class="">1</td>
+        <td>${cliente.id}</td>
         <td>${cliente.nome}</td>
         <td>${cliente.email}</td>
         <td>${cliente.tel}</td>
@@ -25,10 +25,9 @@ function carregarClientes(listaDeClientes) {
         <td>Ativo</td>
         <td class="flex justify-center items-center py-[20px]  gap-[5px]">
         <box-icon type='solid' name='pencil'
-        class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"
-        onclick="editar()"></box-icon>
+        class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]" onclick="editar('${cliente.id}')"></box-icon>
         <box-icon type='solid' name='trash'
-        class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]"></box-icon>
+        class="fill-pink-600 p-2 w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-pink-600 hover:fill-white duration-[600ms]" onclick="deletarCliente('${cliente.id}')"></box-icon>
         </td>
         </tr>`;
     })
@@ -54,16 +53,65 @@ function criarCliente() {
     }
 
     else {
-        clientes.push({
-            nome: nameValue,
-            email: emailValue,
-            tel: telValue,
-            data: dataValue,
+        // clientes.push({
+        //     nome: nameValue,
+        //     email: emailValue,
+        //     tel: telValue,
+        //     data: dataValue,
+        // })
+        fetch('http://localhost:3000/clientes', {
+            method:"POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nameValue,
+                email: emailValue,
+                tel: telValue,
+                data: dataValue,
+            })
+            // .then(res => res.json())
+            // .then(() => {
+            //     carregarClientes(clientes)
+            // })
         })
-        sessionStorage.setItem('clientes', JSON.stringify(clientes))
         closeAll()
 
     }
 
 
+}
+function deletarCliente(id){
+    fetch(`http://localhost:3000/clientes/${id}`, {
+        method:"DELETE"
+    })
+    .then(res => res.json())
+    .then(() =>  {
+        alert(`item ${id} apagado`)
+    })
+}
+
+function editar(id) {
+    let overlayback = document.querySelector('#overlay');
+    let editarContei = document.querySelector('#conteiEdit')
+    overlayback.classList.remove('invisible', 'opacity-0')
+    editarContei.classList.remove('-right-full')
+    editarContei.classList.add('right-0')
+
+    let nameEditar = document.querySelector('#editarNome').value;
+    let emailEditar = document.querySelector('#editarEmail').value;
+
+
+    fetch(`http://localhost:3000/clientes/${id}`, {
+        method: "PUT",
+        headers:  {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            nome: nameEditar,
+            email: emailEditar,
+            // tel: telValue,
+            // data: dataValue,
+        })
+    })
 }
